@@ -9,6 +9,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
+      - run: npm ci
       - name: Eleventy Action
         # You may pin to the exact commit or the version.
         # uses: TartanLlama/actions-eleventy@6c28b3072246fb361c537282e3eac5ab9b6ac85e
