@@ -7,7 +7,7 @@ title: home
 
 Earth was been driven into the ground, and the solution offered by corporations was the Net. The Net was a network of full-dive VR clients that hijacked all input and output from the brain, and was operated jointly by 5 megacorporations.
 
-There are differing theories as to how and why, but so many minds all connected together created The Dreamer, a being that existed for a single millisecond: in that time reshaped the universe into a grand soup of fantasy and mundanity; raising the collective imagination to the throne of physical reality. It took 10 years for the megacorps to claw their way back, and they've done so with a vengeance.
+There are differing theories as to how and why, but so many minds all connected together created The Dreamer, a being that existed for a single millisecond: in that time reshaped the universe into a grand soup of fantasy and mundanity; raising the collective imagination to the throne of physical reality. It took 300 years for the megacorps to claw their way back into power from obscurity, and they've done so with a vengeance.
 
 # A More Coherent Introduction
 
