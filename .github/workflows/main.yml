@@ -21,6 +21,11 @@ jobs:
         uses: extrawitz/11ty-dockerless-build@v1
       - name: upload artifact
         uses: actions/upload-artifact@v4
+        with:
+          name: ${{ inputs.name }}
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: ${{ inputs.retention-days }}
+          if-no-files-found: error
       - name: deploy
         id: debloyment
         uses: actions/deploy-pages@v4 
