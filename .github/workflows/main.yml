@@ -10,10 +10,6 @@ jobs:
     permissions:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: "/"
     steps:
       - name: Checkout last commit of repository
         uses: actions/checkout@v3
@@ -29,8 +25,7 @@ jobs:
           # location of the coverage artifacts
           path: _site
       - name: Deploy to neocities
-        uses: bcomnes/deploy-to-neocities@v1
+        uses: kognise/neocities-deploy-action@v1
         with:
-          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-          cleanup: true
-          dist_dir: "./_site"
+          neocities_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          directory: "./_site"
