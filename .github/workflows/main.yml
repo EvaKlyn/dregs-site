@@ -27,7 +27,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # location of the coverage artifacts
-          path: "./_site"
+          path: _site
       - name: Deploy to neocities
         uses: bcomnes/deploy-to-neocities@v1
         with:
