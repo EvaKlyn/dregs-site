@@ -17,29 +17,9 @@ jobs:
     steps:
       - name: Checkout last commit of repository
         uses: actions/checkout@v3
-      - name: Stuff
+      - name: Do Eleventy
         uses: extrawitz/11ty-dockerless-build@v1
-      - name: Archive artifact
-        shell: sh
-        if: runner.os == 'Linux'
-        run: |
-            tar \
-            --dereference --hard-dereference \
-            --directory "$INPUT_PATH" \
-            -cvf "$RUNNER_TEMP/artifact.tar" \
-            --exclude=.git \
-            --exclude=.github \
-            .
-        env:
-          INPUT_PATH: ${{ inputs.path }}
-      - name: upload artifact
-        uses: actions/upload-artifact@v4
+      - name: Deploy 
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          name: ${{ inputs.name }}
-          path: ${{ runner.temp }}/artifact.tar
-          retention-days: ${{ inputs.retention-days }}
-          if-no-files-found: error
-      - name: deploy
-        id: debloyment
-        uses: actions/deploy-pages@v4 
-
+          folder: _site
