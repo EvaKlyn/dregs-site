@@ -1,0 +1,23 @@
+{
+  "name": "dregs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0",
+    "@thedigitalman/eleventy-plugin-toc-a11y": "^2.1.0",
+    "markdown-it": "^14.0.0",
+    "markdown-it-anchor": "^8.6.7"
+  },
+  "dependencies": {
+    "eleventy-plugin-inline-link-favicon": "^1.1.0",
+    "markdown-it-expandable": "^1.0.2",
+    "markdown-it-imsize": "^2.0.1"
+  }
+}

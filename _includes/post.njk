@@ -1,0 +1,10 @@
+---
+layout: page.njk
+date: git Last Modified
+---
+<h1 style="font-size:32px;">
+  <a href="{{ url }}">{{ title }}</a>
+</h1>
+<p>({{ page.date.toLocaleDateString('en-us', { weekday:"short", year:"numeric", month:"short", day:"numeric"}) }})</p>
+
+{{ content | safe }}
