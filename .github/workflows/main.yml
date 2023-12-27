@@ -19,6 +19,19 @@ jobs:
         uses: actions/checkout@v3
       - name: Stuff
         uses: extrawitz/11ty-dockerless-build@v1
+      - name: Archive artifact
+        shell: sh
+        if: runner.os == 'Linux'
+        run: |
+            tar \
+            --dereference --hard-dereference \
+            --directory "$INPUT_PATH" \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            .
+        env:
+          INPUT_PATH: ${{ inputs.path }}
       - name: upload artifact
         uses: actions/upload-artifact@v4
         with:
