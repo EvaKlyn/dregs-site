@@ -16,3 +16,7 @@ I like D&D 4E and want to document my and others' experiences with it in this pe
 One of the things I like most about tabletop RPGs is the sense of a shared world, and I think many independent agents doing stuff in a world and impacting each other is an incredible way to build that sense so I'm optimizing for it.
 
 Up top are the content headings things exist under. "Entries" is for notable world info and "Notes" is for play write-ups and goings on.
+
+# Other stuff
+
+A 4e hack I wrote to be backwards compatible but speed things up can be found [here](/assets/4ep.pdf).
