@@ -1,18 +1,31 @@
-name: Build Site
-
-on:
+name: 11ty build
+'on':
   push:
-    branches: 
-       - main
-
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
     steps:
-      - name: Eleventy Action
-        # You may pin to the exact commit or the version.
-        # uses: TartanLlama/actions-eleventy@6c28b3072246fb361c537282e3eac5ab9b6ac85e
-        uses: TartanLlama/actions-eleventy@v1.2
+      - name: Checkout last commit of repository
+        uses: actions/checkout@v3
+      - name: Do Eleventy
+        uses: extrawitz/11ty-dockerless-build@v1
+      - name: Setup Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/configure-pages@v3
+      - name: Upload Artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v1
         with:
-          # If set to `true`, `npm install` will be run before Eleventy is invoked
-          install_dependencies: true
+          # location of the coverage artifacts
+          path: _site
+      - name: Deploy to neocities
+        uses: kognise/neocities-deploy-action@v1
+        with:
+          neocities_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          directory: "./_site"
