@@ -20,7 +20,7 @@ jobs:
       - name: Stuff
         uses: extrawitz/11ty-dockerless-build@v1
       - name: upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
       - name: deploy
         id: debloyment
         uses: actions/deploy-pages@v4 
