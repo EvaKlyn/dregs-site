@@ -5,7 +5,7 @@ title: how-to
 
 # The Site
 
-This website is for my personal 4E world and the games/players shaping it. "Entries" is for notable world info and "Notes" is for play write-ups and goings on. If you want to contribute, this page is about how.
+This website is a living document, and you're entitled to add to it if you play in my games. Because of that, I've tried to balance my nerd-brain tendencies to make Good but inaccessible with the need to make a simple enough way for people who aren't me to contribute. I think this is close enough.
 
 # The Basics
 
