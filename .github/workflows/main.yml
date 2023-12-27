@@ -13,7 +13,7 @@ jobs:
     # Deploy to the github-pages environment
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: "/"
     steps:
       - name: Checkout last commit of repository
         uses: actions/checkout@v3
@@ -38,7 +38,7 @@ jobs:
     environment:
       # environment created automatically by GitHub
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: "/"
     steps:
     - name: Deploy to GitHub Pages
       id: deployment
